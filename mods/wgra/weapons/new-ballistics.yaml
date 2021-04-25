@@ -1,0 +1,70 @@
+^BallisticEffectsSmall:
+	Report: cannon1.aud
+	Projectile: Bullet
+		Speed: 682
+		Image: 120MM
+		Shadow: True
+	Warhead@2Smu: LeaveSmudge
+		SmudgeType: Crater
+		ValidTargets: Ground, Infantry
+	Warhead@3Eff: CreateEffect
+		Explosions: med_explosion
+		ImpactSounds: kaboom12.aud
+		ValidTargets: Ground, GroundActor, WaterActor, Trees
+	Warhead@4EffWater: CreateEffect
+		Explosions: med_splash
+		ImpactSounds: splash9.aud
+		ValidTargets: Water, Underwater
+		InvalidTargets: Bridge
+
+^BallisticEffectsMedium:
+	Inherits: ^BallisticEffectsSmall
+	Warhead@3Eff: CreateEffect
+		Explosions: artillery_explosion
+		ImpactSounds: kaboom15.aud
+	Warhead@4EffWater: CreateEffect
+		Explosions: large_splash
+
+^BallisticDamage:
+	Warhead@1Dam: SpreadDamage
+		Spread: 1c0
+		Damage: 4500
+		Falloff: 100, 100
+		ValidTargets: GroundActor, WaterActor
+		Versus:
+			None: 60
+			Wood: 35
+			Light: 60
+			Heavy: 25
+			Concrete: 100
+
+^BallisticCrits:
+	Warhead@Crit: GrantExternalConditionWG
+		Conditions: engine-failure, dazzle, optic-failure
+		ValidTargets: GroundActor
+		Chance: 50
+		Duration: 30
+		Range: 1c0
+
+gun.test:
+	Inherits@EFFECTS: ^BallisticEffectsSmall
+	Inherits@DAMAGE: ^BallisticDamage
+	Inherits@CRITS: ^BallisticCrits
+	Range: 6c0
+	ReloadDelay: 40
+
+testtarget:
+	ReloadDelay: 80
+	Range: 16c0
+	ValidTargets: Ground, GroundActor
+	Projectile: InstantHit
+	Warhead@1: TargetDamage
+		ValidTargets: Ground, GroundActor
+
+squad.targeting:
+	ReloadDelay: 60
+	Range: 6c0
+	ValidTargets: Ground, GroundActor
+	Projectile: InstantHit
+	Warhead@1: TargetDamage
+		ValidTargets: Ground, GroundActor

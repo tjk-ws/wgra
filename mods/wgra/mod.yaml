@@ -1,0 +1,317 @@
+Metadata:
+	Title: TBD
+	Version: {DEV_VERSION}
+	Website:
+	WebIcon32:
+
+PackageFormats: Mix
+
+Packages:
+	~^SupportDir|Content/ra/v2/
+	~^SupportDir|Content/ra/v2/expand
+	~^SupportDir|Content/ra/v2/cnc
+	~^SupportDir|Content/ra/v2/movies
+	^EngineDir
+	$wgra: wgra
+	^EngineDir|mods/common: common
+	~main.mix
+	~conquer.mix
+	~lores.mix: lores
+	~hires.mix
+	~local.mix
+	~sounds.mix
+	~speech.mix
+	~allies.mix
+	~russian.mix
+	~temperat.mix
+	~snow.mix
+	~interior.mix
+	~scores.mix
+	~scores-extra.mix
+	~expand2.mix
+	~hires1.mix
+	~desert.mix
+	~general.mix
+	wgra|bits
+	wgra|bits/desert
+	wgra|bits/scripts
+	wgra|uibits
+
+MapFolders:
+	wgra|maps: System
+	~^SupportDir|maps/ra/{DEV_VERSION}: User
+
+Rules:
+	wgra|rules/misc.yaml
+	wgra|rules/ai.yaml
+	wgra|rules/player.yaml
+	wgra|rules/palettes.yaml
+	wgra|rules/world.yaml
+	wgra|rules/defaults.yaml
+	wgra|rules/vehicles.yaml
+	wgra|rules/husks.yaml
+	wgra|rules/structures.yaml
+	wgra|rules/infantry.yaml
+	wgra|rules/civilian.yaml
+	wgra|rules/decoration.yaml
+	wgra|rules/aircraft.yaml
+	wgra|rules/ships.yaml
+	wgra|rules/fakes.yaml
+	wgra|rules/chassis.yaml
+	wgra|rules/new-vehicles.yaml
+
+Sequences:
+	wgra|sequences/ships.yaml
+	wgra|sequences/vehicles.yaml
+	wgra|sequences/structures.yaml
+	wgra|sequences/infantry.yaml
+	wgra|sequences/aircraft.yaml
+	wgra|sequences/misc.yaml
+	wgra|sequences/decorations.yaml
+
+TileSets:
+	wgra|tilesets/snow.yaml
+	wgra|tilesets/interior.yaml
+	wgra|tilesets/temperat.yaml
+	wgra|tilesets/desert.yaml
+
+Cursors:
+	wgra|cursors.yaml
+
+Chrome:
+	wgra|chrome.yaml
+
+Assemblies:
+	^BinDir|OpenRA.Mods.Common.dll
+	^BinDir|OpenRA.Mods.Cnc.dll
+	^BinDir|OpenRA.Mods.Wgra.dll
+
+ChromeLayout:
+	common|chrome/ingame.yaml
+	common|chrome/ingame-chat.yaml
+	common|chrome/ingame-fmvplayer.yaml
+	common|chrome/ingame-info.yaml
+	common|chrome/ingame-infoscripterror.yaml
+	common|chrome/ingame-infobriefing.yaml
+	common|chrome/ingame-infoobjectives.yaml
+	common|chrome/ingame-infostats.yaml
+	common|chrome/ingame-menu.yaml
+	wgra|chrome/ingame-observer.yaml
+	wgra|chrome/ingame-player.yaml
+	common|chrome/ingame-perf.yaml
+	common|chrome/ingame-debug.yaml
+	common|chrome/ingame-debuginfo.yaml
+	common|chrome/ingame-infochat.yaml
+	common|chrome/mainmenu.yaml
+	common|chrome/mainmenu-prompts.yaml
+	common|chrome/settings.yaml
+	common|chrome/settings-display.yaml
+	common|chrome/settings-audio.yaml
+	common|chrome/settings-input.yaml
+	common|chrome/settings-hotkeys.yaml
+	common|chrome/settings-advanced.yaml
+	common|chrome/credits.yaml
+	common|chrome/lobby.yaml
+	common|chrome/lobby-mappreview.yaml
+	common|chrome/lobby-players.yaml
+	common|chrome/lobby-options.yaml
+	common|chrome/lobby-music.yaml
+	common|chrome/lobby-servers.yaml
+	common|chrome/lobby-kickdialogs.yaml
+	common|chrome/color-picker.yaml
+	common|chrome/map-chooser.yaml
+	common|chrome/multiplayer-browser.yaml
+	common|chrome/multiplayer-browserpanels.yaml
+	common|chrome/multiplayer-createserver.yaml
+	common|chrome/multiplayer-directconnect.yaml
+	common|chrome/connection.yaml
+	common|chrome/replaybrowser.yaml
+	common|chrome/gamesave-browser.yaml
+	wgra|chrome/gamesave-loading.yaml
+	common|chrome/dropdowns.yaml
+	common|chrome/musicplayer.yaml
+	common|chrome/tooltips.yaml
+	common|chrome/assetbrowser.yaml
+	common|chrome/missionbrowser.yaml
+	common|chrome/confirmation-dialogs.yaml
+	common|chrome/editor.yaml
+	common|chrome/playerprofile.yaml
+
+Weapons:
+	wgra|weapons/explosions.yaml
+	wgra|weapons/ballistics.yaml
+	wgra|weapons/missiles.yaml
+	wgra|weapons/other.yaml
+	wgra|weapons/smallcaliber.yaml
+	wgra|weapons/superweapons.yaml
+	wgra|weapons/new-ballistics.yaml
+
+Voices:
+	wgra|audio/voices.yaml
+
+Notifications:
+	wgra|audio/notifications.yaml
+
+Music:
+	wgra|audio/music.yaml
+
+Translations:
+	wgra|languages/english.yaml
+
+Hotkeys:
+	common|hotkeys/game.yaml
+	common|hotkeys/observer.yaml
+	common|hotkeys/production-common.yaml
+	common|hotkeys/supportpowers.yaml
+	common|hotkeys/viewport.yaml
+	wgra|hotkeys.yaml
+
+LoadScreen: LogoStripeLoadScreen
+	Image: wgra|uibits/loadscreen.png
+	Image2x: wgra|uibits/loadscreen-2x.png
+	Image3x: wgra|uibits/loadscreen-3x.png
+	Text: Filling Crates..., Charging Capacitors..., Reticulating Splines..., Planting Trees..., Building Bridges..., Aging Empires..., Compiling EVA..., Constructing Pylons..., Activating Skynet..., Splitting Atoms...
+
+ServerTraits:
+	LobbyCommands
+	PlayerPinger
+	MasterServerPinger
+	LobbySettingsNotification
+
+ChromeMetrics:
+	common|metrics.yaml
+	wgra|metrics.yaml
+
+Fonts:
+	Tiny:
+		Font: common|FreeSans.ttf
+		Size: 10
+		Ascender: 8
+	TinyBold:
+		Font: common|FreeSansBold.ttf
+		Size: 10
+		Ascender: 8
+	Small:
+		Font: common|FreeSans.ttf
+		Size: 12
+		Ascender: 9
+	Regular:
+		Font: common|FreeSans.ttf
+		Size: 14
+		Ascender: 11
+	Bold:
+		Font: common|FreeSansBold.ttf
+		Size: 14
+		Ascender: 11
+	MediumBold:
+		Font: common|FreeSansBold.ttf
+		Size: 18
+		Ascender: 14
+	BigBold:
+		Font: common|FreeSansBold.ttf
+		Size: 24
+		Ascender: 18
+	Title:
+		Font: wgra|ZoodRangmah.ttf
+		Size: 48
+		Ascender: 26
+
+Missions:
+	wgra|missions.yaml
+
+MapGrid:
+	TileSize: 24,24
+	Type: Rectangular
+
+SupportsMapsFrom: ra
+
+SoundFormats: Aud, Wav
+
+SpriteFormats: ShpD2, ShpTD, TmpRA, TmpTD, ShpTS
+
+VideoFormats: Vqa, Wsa
+
+TerrainFormat: DefaultTerrain
+
+SpriteSequenceFormat: ClassicTilesetSpecificSpriteSequence
+	TilesetExtensions:
+		TEMPERAT: .tem
+		SNOW: .sno
+		INTERIOR: .int
+		DESERT: .des
+
+ModelSequenceFormat: PlaceholderModelSequence
+
+AssetBrowser:
+	SupportedExtensions: .shp, .tmp, .tem, .des, .sno, .int, .vqa, .wsa
+
+GameSpeeds:
+	DefaultSpeed: default
+	Speeds:
+		slowest:
+			Name: Slowest
+			Timestep: 80
+			OrderLatency: 2
+		slower:
+			Name: Slower
+			Timestep: 50
+			OrderLatency: 3
+		default:
+			Name: Normal
+			Timestep: 40
+			OrderLatency: 3
+		fast:
+			Name: Fast
+			Timestep: 35
+			OrderLatency: 4
+		faster:
+			Name: Faster
+			Timestep: 30
+			OrderLatency: 4
+		fastest:
+			Name: Fastest
+			Timestep: 20
+			OrderLatency: 6
+
+ColorValidator:
+	TeamColorPresets: f7b3b3, f50606, 98331f, f57606, f7bb06, f861a4, da06f3, ddb8ff, 06f739, cef7b2, 200738, 280df6, 2f86f2, 76d2f8, 34ba93, 391d1d
+
+ModContent:
+	InstallPromptMessage: Red Alert requires artwork and audio from the original game.\n\nQuick Install will automatically download this content (without music\nor videos) from a mirror of the 2008 Red Alert freeware release.\n\nAdvanced Install includes options for copying the music, videos, and\nother content from an original game disc or digital installation.
+	QuickDownload: quickinstall
+	HeaderMessage: Game content may be extracted from the original game discs or an\nexisting digital install. OpenRA can also download the base game\nfiles from an online mirror of the 2008 freeware release of RA.
+	Packages:
+		base: Base Game Files
+			TestFiles: ^SupportDir|Content/ra/v2/allies.mix, ^SupportDir|Content/ra/v2/conquer.mix, ^SupportDir|Content/ra/v2/interior.mix, ^SupportDir|Content/ra/v2/hires.mix, ^SupportDir|Content/ra/v2/lores.mix, ^SupportDir|Content/ra/v2/local.mix, ^SupportDir|Content/ra/v2/speech.mix, ^SupportDir|Content/ra/v2/russian.mix, ^SupportDir|Content/ra/v2/snow.mix, ^SupportDir|Content/ra/v2/sounds.mix, ^SupportDir|Content/ra/v2/temperat.mix
+			Sources: allied, allied-linux, soviet, soviet-linux, tfd, ra-origin
+			Required: true
+			Download: basefiles
+		aftermathbase: Aftermath Expansion Files
+			TestFiles: ^SupportDir|Content/ra/v2/expand/expand2.mix, ^SupportDir|Content/ra/v2/expand/hires1.mix, ^SupportDir|Content/ra/v2/expand/lores1.mix, ^SupportDir|Content/ra/v2/expand/chrotnk1.aud, ^SupportDir|Content/ra/v2/expand/fixit1.aud, ^SupportDir|Content/ra/v2/expand/jburn1.aud, ^SupportDir|Content/ra/v2/expand/jchrge1.aud, ^SupportDir|Content/ra/v2/expand/jcrisp1.aud, ^SupportDir|Content/ra/v2/expand/jdance1.aud, ^SupportDir|Content/ra/v2/expand/jjuice1.aud, ^SupportDir|Content/ra/v2/expand/jjump1.aud, ^SupportDir|Content/ra/v2/expand/jlight1.aud, ^SupportDir|Content/ra/v2/expand/jpower1.aud, ^SupportDir|Content/ra/v2/expand/jshock1.aud, ^SupportDir|Content/ra/v2/expand/jyes1.aud, ^SupportDir|Content/ra/v2/expand/madchrg2.aud, ^SupportDir|Content/ra/v2/expand/madexplo.aud, ^SupportDir|Content/ra/v2/expand/mboss1.aud, ^SupportDir|Content/ra/v2/expand/mhear1.aud, ^SupportDir|Content/ra/v2/expand/mhotdig1.aud, ^SupportDir|Content/ra/v2/expand/mhowdy1.aud, ^SupportDir|Content/ra/v2/expand/mhuh1.aud, ^SupportDir|Content/ra/v2/expand/mlaff1.aud, ^SupportDir|Content/ra/v2/expand/mrise1.aud, ^SupportDir|Content/ra/v2/expand/mwrench1.aud, ^SupportDir|Content/ra/v2/expand/myeehaw1.aud, ^SupportDir|Content/ra/v2/expand/myes1.aud
+			Sources: aftermath, aftermath-linux, tfd, ra-origin
+			Required: true
+			Download: aftermath
+		cncdesert: C&C Desert Tileset
+			TestFiles: ^SupportDir|Content/ra/v2/cnc/desert.mix
+			Sources: tfd, cnc-origin, cnc95, cnc95-linux
+			Required: true
+			Download: cncdesert
+		music: Base Game Music
+			TestFiles: ^SupportDir|Content/ra/v2/scores.mix
+			Sources: allied, allied-linux, soviet, soviet-linux, tfd, ra-origin
+		music-counterstrike: Counterstrike Music
+			TestFiles: ^SupportDir|Content/ra/v2/expand/araziod.aud, ^SupportDir|Content/ra/v2/expand/backstab.aud, ^SupportDir|Content/ra/v2/expand/chaos2.aud, ^SupportDir|Content/ra/v2/expand/shut_it.aud, ^SupportDir|Content/ra/v2/expand/2nd_hand.aud, ^SupportDir|Content/ra/v2/expand/twinmix1.aud, ^SupportDir|Content/ra/v2/expand/under3.aud, ^SupportDir|Content/ra/v2/expand/vr2.aud,
+			Sources: counterstrike, counterstrike-linux, ra-origin
+		music-aftermath: Aftermath Music
+			TestFiles: ^SupportDir|Content/ra/v2/expand/await.aud, ^SupportDir|Content/ra/v2/expand/bog.aud, ^SupportDir|Content/ra/v2/expand/float_v2.aud, ^SupportDir|Content/ra/v2/expand/gloom.aud, ^SupportDir|Content/ra/v2/expand/grndwire.aud, ^SupportDir|Content/ra/v2/expand/rpt.aud, ^SupportDir|Content/ra/v2/expand/search.aud, ^SupportDir|Content/ra/v2/expand/traction.aud, ^SupportDir|Content/ra/v2/expand/wastelnd.aud
+			Sources: aftermath, aftermath-linux, ra-origin
+	Downloads:
+		wgra|installer/downloads.yaml
+	Sources:
+		wgra|installer/aftermath.yaml
+		wgra|installer/allies95.yaml
+		wgra|installer/cnc95.yaml
+		wgra|installer/counterstrike.yaml
+		wgra|installer/firstdecade.yaml
+		wgra|installer/origin.yaml
+		wgra|installer/soviet95.yaml

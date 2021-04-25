@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+   <Import Project="../engine/Directory.Build.props" />
+  <PropertyGroup>
+    <OutputPath>../engine/bin</OutputPath>
+    <CodeAnalysisRuleSet>../engine/OpenRA.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="../engine/OpenRA.Game/OpenRA.Game.csproj">
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="../engine/OpenRA.Mods.Cnc/OpenRA.Mods.Cnc.csproj">
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="../engine/OpenRA.Mods.Common/OpenRA.Mods.Common.csproj">
+      <Private>False</Private>
+    </ProjectReference>
+    <AdditionalFiles Include="../engine/stylecop.json" />
+  </ItemGroup>
+</Project>

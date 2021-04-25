@@ -1,0 +1,129 @@
+^vehicle.visual_base:
+	Inherits@1: ^ClassicFacingSpriteActor
+	Selectable:
+		Bounds: 1024, 1024
+	RenderSprites:
+		Image: allvehicles
+	WithFacingSpriteBody:
+
+^chassis.ranger:
+	Inherits: ^vehicle.visual_base
+	WithFacingSpriteBody:
+		Sequence: jeep
+
+^chassis.mobile_flak:
+	Inherits: ^vehicle.visual_base
+	WithFacingSpriteBody:
+		Sequence: ftrk
+	Selectable:
+		DecorationBounds: 1194, 1194
+
+^chassis.apc:
+	Inherits: ^vehicle.visual_base
+	WithFacingSpriteBody:
+		Sequence: 1tnk
+
+^chassis.minelayer:
+	Inherits: ^vehicle.visual_base
+	WithFacingSpriteBody:
+		Sequence: mnly
+
+^chassis.light_tank:
+	Inherits: ^vehicle.visual_base
+	WithFacingSpriteBody:
+		Sequence: 1tnk
+
+^chassis.medium_tank:
+	Inherits: ^vehicle.visual_base
+	WithFacingSpriteBody:
+		Sequence: 2tnk
+	Selectable:
+		DecorationBounds: 1194, 1194
+
+^chassis.heavy_tank:
+	Inherits: ^vehicle.visual_base
+	WithFacingSpriteBody:
+		Sequence: 3tnk
+	Selectable:
+		DecorationBounds: 1194, 1194
+
+^chassis.mammoth_tank:
+	Inherits: ^vehicle.visual_base
+	WithFacingSpriteBody:
+		Sequence: 4tnk
+	Selectable:
+		DecorationBounds: 1877, 1621, 0, -170
+
+^chassis.cargo_truck:
+	Inherits: ^vehicle.visual_base
+	WithFacingSpriteBody:
+		Sequence: truk
+
+^chassis.demo_truck:
+	Inherits: ^vehicle.visual_base
+	WithFacingSpriteBody:
+		Sequence: dtrk
+
+^chassis.medium_truck:
+	Inherits: ^vehicle.visual_base
+	WithFacingSpriteBody:
+		Sequence: mgg
+
+^chassis.long_truck:
+	Inherits: ^vehicle.visual_base
+	WithFacingSpriteBody:
+		Sequence: v2-empty
+	Selectable:
+		DecorationBounds: 1194, 1194
+
+^chassis.large_truck:
+	Inherits: ^vehicle.visual_base
+	WithFacingSpriteBody:
+		Sequence: mcv
+	Selectable:
+		DecorationBounds: 1792, 1792
+
+^chassis.artillery:
+	Inherits: ^vehicle.visual_base
+	WithFacingSpriteBody:
+		Sequence: arty
+
+^chassis.tracked_truck:
+	Inherits: ^vehicle.visual_base
+	WithFacingSpriteBody:
+		Sequence: mrj
+
+^chassis.dozer:
+	Inherits: ^vehicle.visual_base
+	WithFacingSpriteBody:
+		Sequence: harv
+	Selectable:
+		DecorationBounds: 1792, 1792
+
+^chassis.tesla_tank:
+	Inherits: ^vehicle.visual_base
+	WithFacingSpriteBody:
+		Sequence: ttnk
+	WithIdleOverlay@SPINNER:
+		Sequence: ttnk-spinner
+	Selectable:
+		DecorationBounds: 1280, 1280
+
+^chassis.chrono_tank:
+	Inherits: ^vehicle.visual_base
+	WithFacingSpriteBody:
+		Sequence: ctnk
+	Selectable:
+		DecorationBounds: 1280, 1280
+
+^chassis.mad_tank:
+	Inherits: ^vehicle.visual_base
+	WithFacingSpriteBody:
+		Sequence: qtnk
+	Selectable:
+		DecorationBounds: 1877, 1621, 0, -170
+
+^chassis.phase_transport:
+	Inherits: ^vehicle.visual_base
+	WithFacingSpriteBody:
+		Sequence: sapc
